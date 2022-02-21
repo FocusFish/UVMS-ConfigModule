@@ -9,7 +9,7 @@
 
     <groupId>fish.focus.uvms.config</groupId>
     <artifactId>config</artifactId>
-    <version>4.3.11</version>
+    <version>4.3.12</version>
     <packaging>pom</packaging>
     <description>Maven projekt-archetype for UnionVms modules</description>
 
@@ -76,7 +76,7 @@
     </dependencyManagement>
 
     <scm>
-        <connection>scm:git:https://github.com/FocusFish/UVMS-ConfigModule-APP.git</connection>
+        <connection>scm:git:https://github.com/FocusFish/UVMS-ConfigModule.git</connection>
         <tag>HEAD</tag>
     </scm>
 
