@@ -76,7 +76,7 @@
     </dependencyManagement>
 
     <scm>
-        <connection>scm:git:https://github.com/FocusFish/UVMS-ConfigModule-APP.git</connection>
+        <connection>scm:git:https://github.com/FocusFish/UVMS-ConfigModule.git</connection>
         <tag>HEAD</tag>
     </scm>
 
