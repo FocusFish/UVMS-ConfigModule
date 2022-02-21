@@ -44,7 +44,7 @@
 	</filter-mapping>
 	<filter>
 		<filter-name>RequestFilter</filter-name>
-		<filter-class>eu.europa.ec.fisheries.uvms.config.rest.filter.RequestFilter</filter-class>
+		<filter-class>fish.focus.uvms.config.rest.filter.RequestFilter</filter-class>
 		<async-supported>true</async-supported>
 	</filter>
 
@@ -54,7 +54,7 @@
 	</filter-mapping>
     <filter>
         <filter-name>AuthenticationFilter</filter-name>
-        <filter-class>eu.europa.ec.fisheries.uvms.rest.security.AuthenticationFilter</filter-class>
+        <filter-class>fish.focus.uvms.rest.security.AuthenticationFilter</filter-class>
     </filter>
     <filter-mapping>
         <filter-name>AuthenticationFilter</filter-name>

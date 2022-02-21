@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-			xmlns:common="urn:types.config.schema.fisheries.ec.europa.eu:v1"
-			targetNamespace="urn:types.config.schema.fisheries.ec.europa.eu:v1" version="1.0">
+			xmlns:common="urn:types.config.schema.focus.fish:v1"
+			targetNamespace="urn:types.config.schema.focus.fish:v1" version="1.0">
 
 	<xsd:complexType name="SettingType">
 		<xsd:sequence>
