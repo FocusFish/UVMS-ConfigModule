@@ -1,14 +1,14 @@
 <definitions name="ConfigModule"
-			targetNamespace="urn:module.config.schema.fisheries.ec.europa.eu:v1"
-			xmlns:module="urn:module.config.schema.fisheries.ec.europa.eu:v1" 
-			xmlns:types="urn:types.config.schema.fisheries.ec.europa.eu:v1" 
+			targetNamespace="urn:module.config.schema.focus.fish:v1"
+			xmlns:module="urn:module.config.schema.focus.fish:v1" 
+			xmlns:types="urn:types.config.schema.focus.fish:v1" 
 			xmlns:xsd="http://www.w3.org/2001/XMLSchema"
 			xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
 			xmlns="http://schemas.xmlsoap.org/wsdl/">
 
 	<types>
-		<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:module.config.schema.fisheries.ec.europa.eu:v1">
-			<xsd:import namespace="urn:types.config.schema.fisheries.ec.europa.eu:v1" schemaLocation="Element.xsd"/>
+		<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:module.config.schema.focus.fish:v1">
+			<xsd:import namespace="urn:types.config.schema.focus.fish:v1" schemaLocation="Element.xsd"/>
 
 			<xsd:simpleType name="ConfigModuleMethod">
 				<xsd:restriction base="xsd:string">

@@ -1,15 +1,15 @@
 <definitions name="ConfigDataSource"
-			targetNamespace="urn:source.config.schema.fisheries.ec.europa.eu:v1"
-			xmlns:source="urn:source.config.schema.fisheries.ec.europa.eu:v1"
-			xmlns:types="urn:types.config.schema.fisheries.ec.europa.eu:v1"
+			targetNamespace="urn:source.config.schema.focus.fish:v1"
+			xmlns:source="urn:source.config.schema.focus.fish:v1"
+			xmlns:types="urn:types.config.schema.focus.fish:v1"
 			xmlns:xsd="http://www.w3.org/2001/XMLSchema"
 			xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
 			xmlns="http://schemas.xmlsoap.org/wsdl/">
 
 	<types>
-		<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:source.config.schema.fisheries.ec.europa.eu:v1">
+		<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:source.config.schema.focus.fish:v1">
 
-			<xsd:import namespace="urn:types.config.schema.fisheries.ec.europa.eu:v1" schemaLocation="Element.xsd"/>
+			<xsd:import namespace="urn:types.config.schema.focus.fish:v1" schemaLocation="Element.xsd"/>
 
 			<xsd:simpleType name="ConfigDataSourceMethod">
 				<xsd:restriction base="xsd:string">

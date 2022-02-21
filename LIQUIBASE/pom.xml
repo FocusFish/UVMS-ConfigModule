@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     
     <parent>
-        <groupId>eu.europa.ec.fisheries.uvms.config</groupId>
+        <groupId>fish.focus.uvms.config</groupId>
         <artifactId>config</artifactId>
         <version>4.3.11-SNAPSHOT</version>
     </parent>
@@ -38,29 +38,6 @@
 		    </dependencies>            
         </profile>
     	
-		<profile>
-            <id>oracle</id>
-            <activation>
-                <activeByDefault>false</activeByDefault>
-            </activation>
-            <properties>
-				  <db.url>jdbc:oracle:thin:@localhost:1521:db04t01</db.url>
-				  <db.driver>oracle.jdbc.driver.OracleDriver</db.driver>
-				  <db.user>uvms_config</db.user>
-				  <db.passwd>uvms_config</db.passwd>
-                <db.changeLogFile>changelog/db-changelog-master.xml</db.changeLogFile>
-                <driver.groupId>com.oracle</driver.groupId>
-                <driver.artifactId>ojdbc7</driver.artifactId>
-                <driver.version>12.1.0.2.0</driver.version>
-            </properties>
-            <dependencies>
-		        <dependency>
-		            <groupId>${driver.groupId}</groupId>
-		            <artifactId>${driver.artifactId}</artifactId>
-		            <version>${driver.version}</version>
-		        </dependency>
-		    </dependencies>            
-        </profile>
         <profile>
 			<id>publish-sql</id>
 			<build>
@@ -113,25 +90,6 @@
 				<db.docker.url>offline:postgresql?changeLogFile=target/databasechangelog.csv&amp;outputLiquibaseSql=true</db.docker.url>
 			</properties>
 		</profile>               
-        <profile>
-            <id>release</id>
-            <activation>
-                <activeByDefault>false</activeByDefault>
-            </activation>
-            <properties>
-                <repository.id>${project.distributionManagement.repository.id}</repository.id>
-                <repository.url>${project.distributionManagement.repository.url}</repository.url>
-            </properties>
-        </profile>
-        <profile>
-            <id>belgium-local</id>
-            <properties>
-                <db.url>jdbc:postgresql://apunid01/uvms</db.url>
-                <db.user>config</db.user>
-                <db.passwd>config</db.passwd>
-                <db.defaultSchema>config</db.defaultSchema>
-            </properties>
-        </profile>
 	</profiles>
 	
     <build>

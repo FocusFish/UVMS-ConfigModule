@@ -7,7 +7,7 @@
     <packaging>war</packaging>
 
     <parent>
-        <groupId>eu.europa.ec.fisheries.uvms.config</groupId>
+        <groupId>fish.focus.uvms.config</groupId>
         <artifactId>config</artifactId>
         <version>4.3.11-SNAPSHOT</version>
     </parent>
@@ -27,46 +27,38 @@
             <type>pom</type>
         </dependency>
         <dependency>
-            <groupId>eu.europa.ec.fisheries.uvms.config</groupId>
+            <groupId>fish.focus.uvms.config</groupId>
             <artifactId>config-model</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>eu.europa.ec.fisheries.uvms.commons</groupId>
+            <groupId>fish.focus.uvms.commons</groupId>
             <artifactId>uvms-commons-message</artifactId>
             <version>${uvms.common.version}</version>
         </dependency>
         <dependency>
-            <groupId>eu.europa.ec.fisheries.uvms.commons</groupId>
+            <groupId>fish.focus.uvms.commons</groupId>
             <artifactId>uvms-commons-rest</artifactId>
             <version>${uvms.common.version}</version>
         </dependency>
         <dependency>
-            <groupId>eu.europa.ec.fisheries.uvms.audit</groupId>
+            <groupId>fish.focus.uvms.audit</groupId>
             <artifactId>audit-model</artifactId>
             <version>${audit.model.version}</version>
             <type>jar</type>
         </dependency>
         <dependency>
-            <groupId>eu.europa.ec.fisheries.uvms.commons</groupId>
+            <groupId>fish.focus.uvms.commons</groupId>
             <artifactId>uvms-commons-date</artifactId>
         </dependency>
         <dependency>
-            <groupId>eu.europa.ec.fisheries.uvms</groupId>
+            <groupId>fish.focus.uvms.lib</groupId>
             <artifactId>usm4uvms</artifactId>
             <version>${usm4uvms.version}</version>
             <exclusions>
                 <exclusion>
-                    <groupId>eu.europa.ec.fisheries.uvms</groupId>
+                    <groupId>fish.focus.uvms</groupId>
                     <artifactId>uvms-commons</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.jboss.resteasy</groupId>
-                    <artifactId>resteasy-jaxrs</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>net.sf.ehcache</groupId>
-                    <artifactId>ehcache</artifactId>
                 </exclusion>
             </exclusions>
         </dependency>
@@ -126,41 +118,6 @@
                             <password>${password}</password>
                             <force>true</force>
                         </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-        <!-- USE following command to run this profile: mvn clean install -P generate-rest-doc -Dhostname=127.0.0.1 -Dport=8080  -->
-        <profile>
-            <id>generate-rest-doc</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-javadoc-plugin</artifactId>
-                        <version>3.3.2</version>
-                        <executions>
-                            <execution>
-                                <id>generate-service-docs</id>
-                                <phase>generate-resources</phase>
-                                <configuration>
-                                    <doclet>com.carma.swagger.doclet.ServiceDoclet</doclet>
-                                    <docletArtifact>
-                                        <groupId>com.carma</groupId>
-                                        <artifactId>swagger-doclet</artifactId>
-                                        <version>1.1.2</version>
-                                    </docletArtifact>
-                                    <reportOutputDirectory>src/main/webapp</reportOutputDirectory>
-                                    <useStandardDocletOptions>false</useStandardDocletOptions>
-                                    <additionalparam>-apiVersion ${project.version}
-                                        -docBasePath /${project.parent.artifactId}/apidocs
-                                        -apiBasePath /${project.parent.artifactId}/rest</additionalparam>
-                                </configuration>
-                                <goals>
-                                    <goal>javadoc</goal>
-                                </goals>
-                            </execution>
-                        </executions>
                     </plugin>
                 </plugins>
             </build>
