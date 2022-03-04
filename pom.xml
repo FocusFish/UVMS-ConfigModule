@@ -19,7 +19,7 @@
         <docker.liquibase.changeLogFile>LIQUIBASE/changelog/db-changelog-master.xml</docker.liquibase.changeLogFile>
         <docker.liquibase.db.user>config</docker.liquibase.db.user>
         <docker.liquibase.db.passwd>config</docker.liquibase.db.passwd>
-        <docker.dev.version>4.1.3</docker.dev.version>
+        <docker.dev.version>4.1.5</docker.dev.version>
 
         <fish.focus.parent.version>3.16</fish.focus.parent.version>
         <usm4uvms.version>4.1.10</usm4uvms.version>
@@ -67,7 +67,7 @@
                 <version>${uvms.common.version}</version>
             </dependency>
             <dependency>
-                <groupId>eu.europa.ec.fisheries.uvms.docker</groupId>
+                <groupId>fish.focus.uvms.docker</groupId>
                 <artifactId>uvms-docker-wildfly-unionvms</artifactId>
                 <version>${docker.dev.version}</version>
                 <type>pom</type>
