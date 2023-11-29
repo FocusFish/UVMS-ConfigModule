@@ -9,7 +9,7 @@
 
     <groupId>fish.focus.uvms.config</groupId>
     <artifactId>config</artifactId>
-    <version>4.3.13</version>
+    <version>4.3.14-SNAPSHOT</version>
     <packaging>pom</packaging>
     <description>Maven projekt-archetype for UnionVms modules</description>
 
