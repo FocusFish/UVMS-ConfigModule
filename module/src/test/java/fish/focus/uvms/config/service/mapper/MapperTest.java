@@ -14,6 +14,7 @@ package fish.focus.uvms.config.service.mapper;
 import fish.focus.schema.config.types.v1.SettingType;
 import fish.focus.uvms.config.service.MockData;
 import fish.focus.uvms.config.service.entity.component.Setting;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -31,9 +32,16 @@ public class MapperTest {
     @InjectMocks
     private ConfigMapper mapper;
 
+    private AutoCloseable openedMocks;
+
     @Before
     public void setUp() {
-        MockitoAnnotations.initMocks(this);
+        openedMocks = MockitoAnnotations.openMocks(this);
+    }
+
+    @After
+    public void closeMocks() throws Exception {
+        openedMocks.close();
     }
 
     @Test
