@@ -4,12 +4,13 @@
     <parent>
         <groupId>fish.focus.uvms.maven</groupId>
         <artifactId>uvms-pom</artifactId>
-        <version>3.19</version>
+        <version>3.33</version>
     </parent>
 
     <groupId>fish.focus.uvms.config</groupId>
     <artifactId>config</artifactId>
-    <version>4.3.13</version>
+    <name>config</name>
+    <version>4.4.0</version>
     <packaging>pom</packaging>
     <description>Maven projekt-archetype for UnionVms modules</description>
 
@@ -19,12 +20,12 @@
         <docker.liquibase.changeLogFile>LIQUIBASE/changelog/db-changelog-master.xml</docker.liquibase.changeLogFile>
         <docker.liquibase.db.user>config</docker.liquibase.db.user>
         <docker.liquibase.db.passwd>config</docker.liquibase.db.passwd>
-        <docker.dev.version>4.2.21</docker.dev.version>
+        <docker.dev.version>4.5.0</docker.dev.version>
 
-        <fish.focus.parent.version>3.19</fish.focus.parent.version>
-        <usm4uvms.version>4.1.11</usm4uvms.version>
+        <fish.focus.parent.version>3.33</fish.focus.parent.version>
+        <usm4uvms.version>4.1.12</usm4uvms.version>
         <audit.model.version>4.3.12</audit.model.version>
-        <uvms.common.version>4.1.12</uvms.common.version>
+        <uvms.common.version>4.1.15</uvms.common.version>
 
         <project.scm.id>github</project.scm.id>
     </properties>

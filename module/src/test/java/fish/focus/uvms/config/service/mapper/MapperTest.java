@@ -11,18 +11,19 @@ copy of the GNU General Public License along with the IFDM Suite. If not, see <h
  */
 package fish.focus.uvms.config.service.mapper;
 
-import static org.junit.Assert.*;
-
+import fish.focus.schema.config.types.v1.SettingType;
+import fish.focus.uvms.config.service.MockData;
+import fish.focus.uvms.config.service.entity.component.Setting;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.MockitoAnnotations;
-import org.mockito.runners.MockitoJUnitRunner;
-import fish.focus.uvms.config.service.MockData;
-import fish.focus.uvms.config.service.entity.component.Setting;
-import fish.focus.uvms.config.service.mapper.ConfigMapper;
-import fish.focus.schema.config.types.v1.SettingType;
+import org.mockito.junit.MockitoJUnitRunner;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertSame;
 
 @RunWith(MockitoJUnitRunner.class)
 public class MapperTest {
@@ -31,9 +32,16 @@ public class MapperTest {
     @InjectMocks
     private ConfigMapper mapper;
 
+    private AutoCloseable openedMocks;
+
     @Before
     public void setUp() {
-        MockitoAnnotations.initMocks(this);
+        openedMocks = MockitoAnnotations.openMocks(this);
+    }
+
+    @After
+    public void closeMocks() throws Exception {
+        openedMocks.close();
     }
 
     @Test
